@@ -108,12 +108,24 @@ body {
     align-items: center;
     font-size: 32px;
 
+    @media (max-width: 970px) {
+      & {
+        font-size: 20px;
+      }
+    }
+
     svg {
       position: relative;
       top: -2px;
       width: 30px;
       height: 30px;
       margin-right: 10px;
+      @media (max-width: 970px) {
+        & {
+          width: 15px;
+          height: 15px;
+        }
+      }
 
       path {
         stroke: $black;
@@ -128,6 +140,7 @@ body {
     cursor: pointer;
     @include noselect();
 
+
     span {
       display: inline-block;
       margin-left: 7px;
@@ -140,6 +153,7 @@ body {
     path {
       transition: all $duration ease-in-out;
     }
+
 
     &:hover {
       svg {
@@ -165,12 +179,29 @@ body {
     border-top: 1px solid $gray-line;
     padding-top: 30px;
     margin-top: 30px;
+    @media (max-width: 970px) {
+      & {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 970px) {
+      & {
+        position: relative;
+      }
+    }
 
     &-img {
       display: flex;
       align-items: center;
       margin-right: 15px;
       width: 10%;
+
+      @media (max-width: 970px) {
+        & {
+          margin-right: 30px;
+        }
+      }
 
       img {
         width: 80px;
@@ -183,6 +214,15 @@ body {
       flex-direction: column;
       justify-content: center;
       width: 40%;
+
+
+      @media (max-width: 970px) {
+        & {
+          width: 100%;
+          margin: 20px 0;
+        }
+      }
+
 
       h3 {
         font-weight: bold;
@@ -203,6 +243,19 @@ body {
       justify-content: space-between;
       width: 13%;
 
+      @media (max-width: 970px) {
+        & {
+          width: 18%;
+        }
+      }
+
+      @media (max-width: 970px) {
+        & {
+          width: 100%;
+          max-width: 100px;
+        }
+      }
+
       &-minus {
         svg {
           path:first-of-type {
@@ -222,6 +275,14 @@ body {
       justify-content: center;
       width: 33%;
 
+      @media (max-width: 970px) {
+        & {
+          width: 100%;
+          justify-content: flex-start;
+          margin: 20px 0;
+        }
+      }
+
       b {
         font-weight: bold;
         font-size: 22px;
@@ -234,6 +295,14 @@ body {
       align-items: center;
       justify-content: flex-end;
       width: 4%;
+
+      @media (max-width: 970px) {
+        & {
+          position: absolute;
+          top: 30px;
+          right: 30px;
+        }
+      }
 
       .button {
         border-color: darken($color: $gray-line, $amount: 10);
@@ -269,6 +338,11 @@ body {
     &-details {
       display: flex;
       justify-content: space-between;
+      @media (max-width: 540px) {
+        & {
+          flex-wrap: wrap;
+        }
+      }
 
       span {
         font-size: 22px;
@@ -286,11 +360,22 @@ body {
       justify-content: space-between;
       margin-top: 40px;
 
+      @media (max-width: 540px) {
+        & {
+          flex-wrap: wrap;
+        }
+      }
+
       .go-back-btn {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 210px;
+        @media (max-width: 540px) {
+          & {
+            margin: 0 0 20px 0;
+          }
+        }
 
         border-color: darken($color: $gray-line, $amount: 10);
 
@@ -329,12 +414,18 @@ body {
 
   &--empty {
     margin: 0 auto;
-    width: 560px;
+    max-width: 560px;
     text-align: center;
 
     h2 {
       font-size: 32px;
       margin-bottom: 10px;
+      @media (max-width: 970px) {
+        & {
+          padding: 0 5px;
+          font-size: 28px;
+        }
+      }
     }
 
     p {
@@ -342,6 +433,12 @@ body {
       line-height: 145.4%;
       letter-spacing: 0.01em;
       color: #777777;
+      @media (max-width: 970px) {
+        & {
+          padding: 0 5px;
+          font-size: 15px;
+        }
+      }
     }
 
     icon {

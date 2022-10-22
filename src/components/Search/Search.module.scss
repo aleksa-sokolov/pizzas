@@ -1,5 +1,12 @@
 .root {
   position: relative;
+  @media (max-width: 970px) {
+    flex-direction: column;
+    & {
+      width: 90%;
+      margin: 20px 0;
+    }
+  }
 }
 
 .root input {
@@ -8,6 +15,11 @@
   width: 300px;
   border-radius: 12px;
   font-size: 16px;
+  @media (max-width: 970px) {
+    & {
+      width: 100%;
+    }
+  }
 }
 
 .root svg {
