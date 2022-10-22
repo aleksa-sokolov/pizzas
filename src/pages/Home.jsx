@@ -7,13 +7,14 @@ import PizzaBlock from "../components/PizzaBlock";
 import {useEffect, useState} from "react";
 import Pagination from "../components/Pagination";
 import {useDispatch, useSelector} from "react-redux";
+import {setItems} from "../redux/slices/pizzasSlice";
 
 const Home = ({searchValue}) => {
     const dispatch = useDispatch();
     const categoryId = useSelector((state) => state.filter.categoryId);
     const currentPage = useSelector((state) => state.filter.currentPage);
+    const items = useSelector((state) => state.pizza.items);
     const sortType = useSelector((state) => state.filter.sort.sortProperty);
-    const [items, setItems] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
 
@@ -27,12 +28,23 @@ const Home = ({searchValue}) => {
 
     useEffect(() => {
         const search = searchValue ? `&search=${searchValue}` : ``;
-        fetch(`https://633d60367e19b178290d1687.mockapi.io/items?page=${currentPage}&limit=4&${categoryId > 0 ? `category=${categoryId}` : ''}&sortBy=${sortType}&order=desc${search}`)
-            .then(res => res.json())
-            .then(json => {
-                setItems(json)
+        const fetchData = async () => {
+            try {
+                let response = await fetch(`https://633d60367e19b178290d1687.mockapi.io/items?page=${currentPage}&limit=4&${categoryId > 0 ? `category=${categoryId}` : ''}&sortBy=${sortType}&order=desc${search}`);
+                if (response.status === 200) {
+                    let data = await response.json();
+                    dispatch(setItems(data));
+                } else {
+                    alert("Не удалось загрузить пиццы :(");
+                    setIsLoading(false);
+                }
+            } catch (err) {
+                console.log(err);
+            } finally {
                 setIsLoading(false);
-            })
+            }
+        }
+        fetchData();
         window.scrollTo(0, 0);
     }, [categoryId, sortType, searchValue, currentPage]);
 
