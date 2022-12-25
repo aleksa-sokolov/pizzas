@@ -1,7 +1,7 @@
 import "./scss/app.scss";
 import Header from "./components/Header";
 import Home from "./pages/Home";
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {BrowserRouter, HashRouter as Routes,Route} from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import Cart from "./pages/Cart";
 import {useState} from "react";
