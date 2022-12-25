@@ -1,7 +1,7 @@
 import "./scss/app.scss";
 import Header from "./components/Header";
 import Home from "./pages/Home";
-import {BrowserRouter, HashRouter as Routes,Route} from "react-router-dom";
+import {BrowserRouter as Router,Route, Routes} from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import Cart from "./pages/Cart";
 import {useState} from "react";
@@ -16,11 +16,13 @@ function App() {
             <SearchContext.Provider value={{searchValue,setSearchValue}}>
                 <Header/>
                 <div className="content">
-                    <Routes>
-                        <Route path="/" element={<Home searchValue={searchValue}/>}/>
-                        <Route path="/card" element={<Cart/>}/>
-                        <Route path="*" element={<NotFound/>}/>
-                    </Routes>
+                    {/*<Router>*/}
+                        <Routes>
+                            <Route path="/" element={<Home searchValue={searchValue}/>}/>
+                            <Route path="/card" element={<Cart/>}/>
+                            <Route path="*" element={<NotFound/>}/>
+                        </Routes>
+                    {/*</Router>*/}
                 </div>
             </SearchContext.Provider>
         </div>
