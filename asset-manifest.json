@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/qwerty-la-la.github.io/pizzas/static/css/main.a7a7eb0e.css",
-    "main.js": "/qwerty-la-la.github.io/pizzas/static/js/main.56790059.js",
-    "static/media/empty-cart.png": "/qwerty-la-la.github.io/pizzas/static/media/empty-cart.db905d1f4b063162f25b.png",
-    "static/media/pizza-logo.svg": "/qwerty-la-la.github.io/pizzas/static/media/pizza-logo.56ac87032d8f6fdf863326acd06c0d97.svg",
-    "index.html": "/qwerty-la-la.github.io/pizzas/index.html",
-    "main.a7a7eb0e.css.map": "/qwerty-la-la.github.io/pizzas/static/css/main.a7a7eb0e.css.map",
-    "main.56790059.js.map": "/qwerty-la-la.github.io/pizzas/static/js/main.56790059.js.map"
+    "main.css": "/pizzas/static/css/main.a7a7eb0e.css",
+    "main.js": "/pizzas/static/js/main.6bf19b99.js",
+    "static/media/empty-cart.png": "/pizzas/static/media/empty-cart.db905d1f4b063162f25b.png",
+    "static/media/pizza-logo.svg": "/pizzas/static/media/pizza-logo.56ac87032d8f6fdf863326acd06c0d97.svg",
+    "index.html": "/pizzas/index.html",
+    "main.a7a7eb0e.css.map": "/pizzas/static/css/main.a7a7eb0e.css.map",
+    "main.6bf19b99.js.map": "/pizzas/static/js/main.6bf19b99.js.map"
   },
   "entrypoints": [
     "static/css/main.a7a7eb0e.css",
-    "static/js/main.56790059.js"
+    "static/js/main.6bf19b99.js"
   ]
 }
