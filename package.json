@@ -1,7 +1,7 @@
 {
   "name": "pizza",
   "version": "0.1.0",
-  "homepage": "qwerty-la-la.github.io/pizzas",
+  "homepage": "https://qwerty-la-la.github.io/pizzas",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.6",
@@ -16,7 +16,7 @@
     "react-dom": "^18.2.0",
     "react-paginate": "^8.1.3",
     "react-redux": "^8.0.4",
-    "react-router-dom": "^6.4.1",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
